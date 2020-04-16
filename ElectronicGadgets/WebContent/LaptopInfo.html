@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-storage.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" href="StyleSheet/PhoneInfo.css">
+</head>
+<body style="background-color:#f2f2f2">
+
+<div class="topnav" id="myTopnav">
+<a href="#" onclick="logout()" style="float:right;">Logout</a>
+<p id="user_para">welcome </p>
+   <a href="homePage.html" style:"border:3px,color:white">Back To Home Page</a>
+</div>
+
+<div id="Maincontainer"  overflow= "auto" style="background-color:#f2f2f2" >
+    
+<div id="containerItem"  width="600px" style="float:left;background-color:#f2f2f2">
+<div class="card" style="background-color:#f2f2f2">
+<div class="card-deck">
+<div class="card-group" >
+
+<table>
+<tr>
+<td>
+  <div class="card text-white" background=#F5F5F5>
+      <img class="card-img-top" src="Images/Laptop/laptop1.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body" >
+          <h3 class="card-title" style="color:black" id="brandSamsungs6">LenovoX</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceSamsungs5">$10</h4>
+          <p class="card-text" style="color:black">no camera</p>
+      </div>
+       <button type="button" onclick="insertInfoSamsungs6()"  id="insertInfoSamsungs6">Add to cart</button>
+  </div>
+  </td>
+  <td>
+  <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop2.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" style="color:black" id="brandSamsungs10">DellX</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceSamsungs10">$5</h4>
+          <p class="card-text" style="color:black">no camera</p>
+      </div>
+      <button type="button" onclick="insertInfoSamsungs10()"  id="insertInfoSamsungs10">Add to cart</button>
+  </div>
+  </td>
+  <td>
+  <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop3.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" id="brandHuwaei" style="color:black" >Colors</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceHuwaei">$15</h4>
+          <p class="card-text" style="color:black">dual camera</p>
+      </div>
+      <button type="button" onclick="insertInfoHuwaei()"  id="insertInfoHuwaei">Add to cart</button>
+  </div>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>
+  
+    <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop6.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" style="color:black" id="brandxiaomi">hplw</h3>
+          <h4 class="card-subtitle" style="color:black" id="pricexiaomi">$10</h4>
+          <p class="card-text" style="color:black">ram</p>
+      </div>
+       <button type="button" onclick="insertInfoxiaomi()"  id="insertInfoxiaomi">Add to cart</button>
+  </div>
+  </td>
+  
+    <td>
+  <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop1.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" style="color:black" id="brandBlackberry">lenovo</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceBlackberry">$2</h4>
+          <p class="card-text" style="color:black">multi tab</p>
+      </div>
+      <button type="button" onclick="insertInfoBlackberry()"  id="insertInfoBlackberry">Add to cart</button>
+  </div>
+  </td>
+  <td>
+  
+    <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop8.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" style="color:black" id="brandredmi">hpl</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceredmi">$12</h4>
+          <p class="card-text" style="color:black">single Camera</p>
+      </div>
+       <button type="button" onclick="insertInforedmi()"  id="insertInforedmi">Add to cart</button>
+  </div>
+  </td></tr><tr><td>
+    <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop7.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" style="color:black" id="brandNokia">dell</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceNokia">$5</h4>
+          <p class="card-text" style="color:black">No camera</p>
+      </div>
+       <button onclick="insertInfoNokia()"  id="insertInfoNokia">Add to cart</button>
+  </div>
+  </td>
+    <td>
+  <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop9.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" style="color:black" id="brandSamsung">Samsungl</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceSamsung">$10.30</h4>
+          <p class="card-text" style="color:black">Dual camera</p>
+      </div>
+      <button type="button" onclick="insertInfoSamsung()"  id="insertInfoSamsung">Add to cart</button>
+  </div>
+  </td>
+  <td>
+    <div class="card text-white">
+      <img class="card-img-top" src="Images/Laptop/laptop5.jpg" alt="Card image top" height="200px" width="50px">
+      <div class="card-body">
+          <h3 class="card-title" style="color:black"  id="brandIphone">hp</h3>
+          <h4 class="card-subtitle" style="color:black" id="priceIphone">$29.00</h4>
+          <p class="card-text" style="color:black">Back camera</p>
+      </div>
+       <button  type="button" onclick="insertInfoIphone()"  id="insertInfoIphone">Add to cart</button>
+  </div>
+  </td></tr>
+  </table>
+</div>
+
+
+</div>
+</div>
+</div>
+
+<div id=containerList  style="float:right; ">
+
+<h1>Your List</h1>
+<table  id="table" border=" 1px solid black">
+<thead>
+<tr>
+<td>Your Order</td>
+<td>Price</td>
+<td>Action</td>
+</tr>
+</thead>
+
+<tbody id="table_body"></tbody>
+</table>
+<button onclick="shippingAdd()">Confirm Order</button>
+</div></div>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+   <script   src="JavaScripts/script.js"></script>
+  <script   src="JavaScripts/PhoneInfo.js"></script>
+
+  </body>
+</html>
