@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+
+<link rel="stylesheet" type="text/css" href="StyleSheet/HomePageStyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="StyleSheet/swiper.min.css">
+</head>
+<body style="background-color:#f2f2f2">
+
+<div class="topnav" id="myTopnav">
+<a href="#" onclick="logout()" style="float:right;">Logout</a>
+  <p id="user_para">welcome </p>
+  <a href="#home" class="active">Home</a>
+  <a href="Product.html">Products</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Recommendation.html">Recommendation</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="galleryContainer">
+  <div class="slideShowContainer">
+  
+   <div class="imageContainer fade">
+   <img src=Images/iphn11.png>
+   </div>
+    <div class="imageContainer fade">
+   <img src=Images/laptop.jpg>
+   </div>
+    <div class="imageContainer fade">
+   <img src=Images/samsun1.jpeg>
+   </div>
+    <div class="imageContainer fade">
+   <img src=Images/samsung.jpg>
+   </div>
+   <div class="imageContainer fade">
+   <img src=Images/smatch.jpg>
+   </div>
+   <div class="imageContainer fade">
+   <img src=Images/l1.jpg>
+   </div>
+   <div class="imageContainer fade">
+   <img src=Images/iphn.png>
+   </div>
+ 
+
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+   <span class="dot"></span> 
+    <span class="dot"></span> 
+     <span class="dot"></span> 
+      <span class="dot"></span> 
+     
+</div>
+
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(Images/Mobile/mobile1.jpeg)">
+      <a href="PhoneInfo.html">Phone</a>
+      </div>
+      <div class="swiper-slide" style="background-image:url(Images/Laptop/laptop2.jpg)">
+         <a href="LaptopInfo.html">Laptop</a>
+      </div>
+      <div class="swiper-slide" style="background-image:url(Images/Smartwatches/smw1.jpg)">
+         <a href="SmartwatchInfo.html">Watch</a>
+      </div>
+      <div class="swiper-slide" style="background-image:url(Images/Mobile/mobile1.jpeg)">
+         <a href="PhoneInfo.html">Phone</a>
+      </div>
+      <div class="swiper-slide" style="background-image:url(Images/Laptop/laptop2.jpg)">
+        <a href="LaptopInfo.html">Laptop</a>
+      </div>
+       <div class="swiper-slide" style="background-image:url(Images/Smartwatches/smw1.jpg)">
+         <a href="SmartwatchInfo.html">Watch</a>
+      </div>
+ 
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+<script src="JavaScripts/script.js"></script>
+<script src="JavaScripts/homePage.js"></script>
+<script src="JavaScripts/swiper.min.js"></script> 
+
+         <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+  <script src="JavaScripts/script.js"></script>
+ 
+</body>
+</html>
+   
